@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { PagesModule } from './pages/pages.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { PortfolioDetailsComponent } from './components/portfolio-details/portfolio-details.component';
+
 
 
 
@@ -21,9 +21,6 @@ import { PortfolioDetailsComponent } from './components/portfolio-details/portfo
 @NgModule({
   declarations: [
     AppComponent,
-    PortfolioDetailsComponent,
-    
-    
   ],
   imports: [
     BrowserModule,

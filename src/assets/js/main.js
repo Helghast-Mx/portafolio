@@ -26,9 +26,9 @@
     let selectEl = select(el, all)
     if (selectEl) {
       if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
+        selectEl.forEach(e => e.addEventListener(type, listener, {passive: true}))
       } else {
-        selectEl.addEventListener(type, listener)
+        selectEl.addEventListener(type, listener, {passive: true})
       }
     }
   }
@@ -37,7 +37,7 @@
    * Easy on scroll event listener 
    */
   const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
+    el.addEventListener('scroll', listener, {passive: true})
   }
 
   /**
@@ -57,7 +57,7 @@
       }
     })
   }
-  window.addEventListener('load', navbarlinksActive)
+  window.addEventListener('load', navbarlinksActive, {passive: true})
   onscroll(document, navbarlinksActive)
 
   /**
@@ -83,7 +83,7 @@
         backtotop.classList.remove('active')
       }
     }
-    window.addEventListener('load', toggleBacktotop)
+    window.addEventListener('load', toggleBacktotop, {passive: true})
     onscroll(document, toggleBacktotop)
   }
 
@@ -327,15 +327,7 @@ window.onload = function() {
 
 var cursor = true;
     var speed = 250;
-    // setInterval(() => {
-    //   if(cursor) {
-    //     document.getElementById('cursor').style.opacity = 0;
-    //     cursor = false;
-    //   }else {
-    //     document.getElementById('cursor').style.opacity = 10;
-    //     cursor = true;
-    //   }
-    // }, speed);
+
 
       
   const select = (el, all = false) => {
@@ -354,9 +346,9 @@ var cursor = true;
     let selectEl = select(el, all)
     if (selectEl) {
       if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
+        selectEl.forEach(e => e.addEventListener(type, listener, {passive: true}))
       } else {
-        selectEl.addEventListener(type, listener)
+        selectEl.addEventListener(type, listener, {passive: true})
       }
     }
   }
@@ -365,7 +357,7 @@ var cursor = true;
    * Easy on scroll event listener 
    */
   const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
+    el.addEventListener('scroll', listener, {passive: true})
   }
 
   /**
@@ -385,7 +377,7 @@ var cursor = true;
       }
     })
   }
-  window.addEventListener('load', navbarlinksActive)
+  window.addEventListener('load', navbarlinksActive, {passive: true})
   onscroll(document, navbarlinksActive)
 
   /**
@@ -411,7 +403,7 @@ var cursor = true;
         backtotop.classList.remove('active')
       }
     }
-    window.addEventListener('load', toggleBacktotop)
+    window.addEventListener('load', toggleBacktotop, {passive: true})
     onscroll(document, toggleBacktotop)
   }
 
