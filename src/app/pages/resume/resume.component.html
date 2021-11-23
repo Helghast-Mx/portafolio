@@ -1,0 +1,50 @@
+    
+<ng-container *ngIf="experience && menu">
+<!-- ======= Resume Section ======= -->
+<section id="resume" class="resume">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>{{menu.resume}}</h2>
+      </div>
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6" >
+          <h3 class="resume-title" >{{menu.profExp}}</h3>
+          <div class="resume-item" *ngFor="let trabajo of experience">
+            <h4>{{trabajo.titulo}}</h4>
+            <h5>{{trabajo.ciclo}}</h5>
+            <ul >
+              <li ><em>{{trabajo.proyects[0].proyectUno }}&nbsp;</em>{{trabajo.proyects[0].uno}}</li>
+              <li ><em>{{trabajo.proyects[0].proyectDos }}</em> {{trabajo.proyects[0].dos}}</li>
+              <li *ngIf="trabajo.proyects[0].tres">{{trabajo.proyects[0].tres}}</li>
+              <li *ngIf="trabajo.proyects[0].cuatro">{{trabajo.proyects[0].cuatro}}</li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <h3 class="resume-title">{{menu.courses}}</h3>
+          <div class="resume-item pb-0" *ngFor="let curso of cursos">
+            <h4>{{curso.nomCur}}</h4>
+            <h5>{{curso.escImp}} - {{curso.duracion}}</h5><em>{{curso.procss}}</em>
+            <p>{{curso.dscCur}}</p>
+          </div>
+    
+    <ng-container *ngIf="educacion">
+          <h3 class="resume-title" >{{menu.education}}</h3>
+          <div class="resume-item">
+            <h4>{{educacion.Carrera}}</h4>
+            <h5>{{educacion.Cursado}}</h5>
+            <p><em>{{educacion.Escuela}}</em></p>
+            <p>{{educacion.Status}}</p>
+          </div>
+
+    </ng-container>
+        </div>
+        
+      </div>
+
+    </div>
+  </section><!-- End Resume Section -->
+
+</ng-container>

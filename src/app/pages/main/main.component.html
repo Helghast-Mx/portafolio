@@ -1,0 +1,80 @@
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  
+  <div *ngIf="!cargada" id="preloader"></div>
+  <div data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+
+
+  <i  class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    
+    
+    
+    <header id="header" class="d-flex flex-column justify-content-center">
+
+        <app-sidebar></app-sidebar>
+    </header><!-- End Header -->
+    <!-- <h1>hola</h1> -->
+    <!-- <section class="section" id="about">
+
+        <div class="containerMain"> -->
+    
+            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt error consequatur id, temporibus nesciunt at? Veniam eius itaque reiciendis voluptate fuga ipsum minus, quos vel libero aperiam, facere tempore excepturi!</p> -->
+            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt error consequatur id, temporibus nesciunt at? Veniam eius itaque reiciendis voluptate fuga ipsum minus, quos vel libero aperiam, facere tempore excepturi!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt error consequatur id, temporibus nesciunt at? Veniam eius itaque reiciendis voluptate fuga ipsum minus, quos vel libero aperiam, facere tempore excepturi!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt error consequatur id, temporibus nesciunt at? Veniam eius itaque reiciendis voluptate fuga ipsum minus, quos vel libero aperiam, facere tempore excepturi!</p> -->
+<!--             
+        </div>
+    </section> -->
+    <!-- <div class="two"></div>
+
+    <div class="three"></div> -->
+    
+    <!-- <div class="hero-img-wrapper">
+        
+    </div>
+
+
+    <div class="container section border">
+        <div class="row align-items-center text-center text-lg-left hero" >
+            <div class="col-lg-5">
+                <div class="containerImg">
+
+                    <img src="../../../assets/Me.jpg" class="imgProfile">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae possimus culpa ipsa soluta recusandae mollitia quam, quidem eveniet ratione a, voluptates asperiores nisi optio odit aliquid quis consectetur reiciendis at.</p>
+            </div>
+        </div>
+    </div> -->
+
+    <app-portada></app-portada>
+
+    <main id="main">
+
+    <app-about *ngIf="cargada"></app-about>
+
+    <!-- <div class="arrow">
+      <a href="/#resume">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    
+    </div> -->
+
+    <app-skills></app-skills>
+    
+    <app-resume></app-resume>
+
+    <app-portfolio></app-portfolio>
+
+    <app-contact></app-contact>
+    </main>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>     
+
+    <router-outlet></router-outlet>
+
+  </div>
+

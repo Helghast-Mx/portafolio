@@ -1,0 +1,38 @@
+<!-- ======= Facts Section ======= -->
+<ng-container *ngIf="menu && products">
+
+<section id="facts" class="facts">
+
+  <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Skills</h2>
+        <p>{{menu.skillsDes}} </p>
+      </div>
+<div data-aos="fade-up" data-aos-delay="100">
+      <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+        
+        <ng-template let-product pTemplate="item">
+            <div class="product-item ">
+                <div class="product-item-content ">
+                    <div class="p-mb-3 ">
+                        <img [src]="product.imgUrl" [alt]="product.name" class="lenguaje-image" />
+                    </div>
+                    <div>
+                        <h4 class="p-mb-1 font-product">{{product.name}}</h4>
+                        <div class="p-field p-col-12 p-md-6">                          
+                          <p-knob ngModel={{product.percentage}} [readonly]="true" valueTemplate="{value}%" [size]="55"></p-knob>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+  </div>
+  </div> 
+
+</section><!-- End Facts Section -->
+</ng-container>
+
+

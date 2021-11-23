@@ -1,0 +1,89 @@
+
+
+.flex-container{
+    z-index: 10;
+}
+
+@media only screen and (max-width:400px){
+    .flex-container{
+        display: flex;
+        background-color: #dd0bc1;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 700px) { 
+    .flex-container{
+        display: flex;
+        background-color: #dd0bc1;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        justify-content: center;
+        flex-direction: row;
+        margin-left: 10%;
+        margin-right: 5%;
+    }
+    
+ }
+
+ @media only screen and (min-width: 701px) { 
+    .flex-container {
+        display: flex;
+        width: auto;
+        background-color: #dd0bc1;
+        float: right;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-right: 2%;;
+        flex-direction: column;
+
+    }
+}
+
+/* .flex-container {
+    display: inline-table;
+    width: 100px;
+    background-color: #dd0bc1;
+    align-items: center;
+    float: right;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    box-sizing: border-box;
+} */
+
+.flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6793e6;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+.flex-item:nth-child(3) {
+    align-self : flex-end;
+}
+
+.nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
+    color: #fff;
+    background: #0563bb;
+  }
+  .nav-menu a:hover span, .nav-menu .active span, .nav-menu .active:focus span, .nav-menu li:hover > a span {
+    color: #fff;
+  }
+  .nav-menu a:hover, .nav-menu li:hover > a {
+    width: 100%;
+    color: #fff;
+  }
+  .nav-menu a:hover span, .nav-menu li:hover > a span {
+    display: block;
+  }
+
+  .lenguaje{
+      cursor: pointer;
+  }
+
+

@@ -1,0 +1,46 @@
+<!-- ======= Portfolio Section ======= -->
+<ng-container *ngIf="menu">
+<section id="portfolio" class="portfolio section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>{{menu.portfolio}}</h2>
+        <p>{{menu.portDes}}</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-card">Card</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row mt-8 mb-8 cntr-cards">
+              <div class="col-sm-9 col-md-6 col-lg-5 col-xl-4 card-projects " 
+                   *ngFor="let project of projects">
+
+                   <div class="card mb-6" style="width: 21.875rem;">
+                    <img [src]="project.imgUrl1" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{project.empresa}}</h5>
+                      <p class="card-text"><small class="text-muted">{{project.subtitulo1}}</small></p>
+                      <p class="card-text">{{project.desc1}}</p>
+                    </div>
+                    <div class="card-body">
+                        <p-button label="View" icon="pi pi-external-link" 
+                                  class="none-bottom"
+                                  (onClick)="onNavigate(project.urlProject)"
+                                   >
+                                </p-button>
+                            </div>
+                        </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section><!-- End Portfolio Section -->
+</ng-container>
