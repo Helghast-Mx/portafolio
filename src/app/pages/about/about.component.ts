@@ -14,18 +14,20 @@ export class AboutComponent implements OnInit {
   cargada : boolean = false
   idioma! : Observable <boolean>
   img :any;
+  edad : number | any;
 
 
   constructor( private CvService : CvService ) {
 
     this.getDatosabout()
+    
     }
 
   ngOnInit(): void {
     this.CvService.lenguaje$.subscribe( lenguaje => {
       this.getDatosabout()
     } )
-    
+    this.calculateAge()
   }
 
   getDatosabout(){
@@ -43,5 +45,14 @@ export class AboutComponent implements OnInit {
     } )
     
   }
+
+  calculateAge() {
+    let hoy = new Date()
+    let fechaNacimiento = 1992
+    this.edad = hoy.getFullYear() - fechaNacimiento
+    console.log(this.edad);
+    
+  } 
+
 
 }

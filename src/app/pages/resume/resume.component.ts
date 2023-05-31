@@ -38,6 +38,8 @@ export class ResumeComponent implements OnInit {
     this.CvService.getExperience()
     .subscribe(resp=>{
       this.experience = resp
+      console.log('Esto es la experiencia: ', resp);
+      
     })
   }
 

@@ -12,9 +12,12 @@
           <h3 class="resume-title" >{{menu.profExp}}</h3>
           <div class="resume-item" *ngFor="let trabajo of experience">
             <h4>{{trabajo.titulo}}</h4>
-            <h5>{{trabajo.ciclo}}</h5>
-            <ul >
+            <h5>{{trabajo.empresa}}</h5>
+            <em>{{trabajo.ciclo}}</em>
+            <ul class="textReducido">
+              <!-- De la empresa mencionada, el primer proyecto -->
               <li ><em>{{trabajo.proyects[0].proyectUno }}&nbsp;</em>{{trabajo.proyects[0].uno}}</li>
+              <!-- De la empresa mencionada, el segundo proyecto -->
               <li ><em>{{trabajo.proyects[0].proyectDos }}</em> {{trabajo.proyects[0].dos}}</li>
               <li *ngIf="trabajo.proyects[0].tres">{{trabajo.proyects[0].tres}}</li>
               <li *ngIf="trabajo.proyects[0].cuatro">{{trabajo.proyects[0].cuatro}}</li>

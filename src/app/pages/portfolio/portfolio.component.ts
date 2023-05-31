@@ -34,6 +34,8 @@ export class PortfolioComponent implements OnInit {
 
   getProjects(){
     this.CvService.getIdxProjects().subscribe(resp=>{
+      console.log(resp);
+      
       this.projects = resp
     })
   }
